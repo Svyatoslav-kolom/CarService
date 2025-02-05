@@ -1,5 +1,5 @@
 import { Box, Divider } from "@chakra-ui/react";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { SocialLinks } from "../SocialLinks";
 import { Services } from "../Services";
 import { AboutUs } from "../AboutUs";
@@ -14,7 +14,6 @@ interface Props {
 }
 
 export const InfoComponent: FC<Props> = ({ selectedComponent }) => {
-
 
   const renderComponent = () => {
     switch (selectedComponent) {
