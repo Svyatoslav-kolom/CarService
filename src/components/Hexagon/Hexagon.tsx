@@ -21,14 +21,14 @@ export const Hexagon: FC<HexagonProps> = ({ title, icon, onClick }) => (
     px="15px"
     overflow="hidden"
     _hover={{
-      backgroundImage: "url('src/assets/background/Hexagons/hover.svg')",
+      backgroundImage: "url('background/Hexagons/hover.svg')",
     }}
     _active={{
       transform: "scale(1.1)",
       transition: "transform 0.2s ease, background-image 0.5s ease",
     }}
     transition="background-image 0.5s ease"
-    backgroundImage="url('src/assets/background/Hexagons/default.svg')"
+    backgroundImage="url('background/Hexagons/default.svg')"
     backgroundPosition="center"
     backgroundSize="cover"
     onClick={() => {

@@ -25,7 +25,7 @@ export const TowingService = () => (
     <Divider />
 
     <Img
-      src="src/assets/img/towing.png"
+      src="img/towing.png"
       mt={7}
     />
 
