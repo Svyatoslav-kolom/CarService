@@ -67,8 +67,6 @@ export const RegistrationForm = ({ onSuccess }: RegistrationFormProps) => {
   return (
     <Box
       pb={6}
-      borderRadius="md"
-      boxShadow="lg"
       mx="auto"
     >
       <form onSubmit={handleSubmit} noValidate>
