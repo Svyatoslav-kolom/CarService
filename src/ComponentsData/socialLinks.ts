@@ -1,7 +1,7 @@
 export const socialLinks = [
     { 
       icon: "icons/SocialLinks/facebook.svg", 
-      href: "https://facebook.com", 
+      href: "https://www.facebook.com/share/g/15gk7HwLAn/?mibextid=wwXIfr", 
       label: "Facebook" 
     },
     { 
