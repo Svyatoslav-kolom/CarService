@@ -1,65 +1,12 @@
 import { Box, HStack, Img, Link, Text, Tooltip, useTheme, VStack, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
+import { socialLinks } from "../../ComponentsData/socialLinks";
+import { headerLinks } from "../../ComponentsData/headerLinks";
 
 export const Header = () => {
   const theme = useTheme();
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
   const { onOpen } = useDisclosure();
-
-  const headerLinks = [
-    {
-      icon: "../../../public/icons/HeaderIcons/Phone.svg",
-      label: "Телефон",
-      content: (
-        <>
-          <Text>SVI AUTOSERVIS</Text>
-          <Text>+420 739 696 649</Text>
-        </>
-      ),
-    },
-    {
-      icon: "../../../public//icons/HeaderIcons/Mail.svg",
-      label: "Email",
-      content: (
-        <>
-          <Text>sviautoservis@email.cz</Text>
-          <Text>Fakturační adresa</Text>
-          <Text>fakturacesviservis@seznam.cz</Text>
-        </>
-      ),
-    },
-    {
-      icon: "../../../public//icons/HeaderIcons/Time.svg",
-      label: "Время работы",
-      content: (
-        <>
-          <Text fontWeight="bold">Otevírací doba</Text>
-          <Text fontSize="12px">Po-Pá  08.00-18.00</Text>
-          <Text fontSize="12px" >So  09.00-16.00</Text>
-        </>
-      ),
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: "../../../public//icons/HeaderIcons/Instagram.svg",
-      href: "https://www.facebook.com/share/g/15gk7HwLAn/?mibextid=wwXIfr",
-      label: "Facebook"
-    },
-    {
-      icon: "../../../public//icons/HeaderIcons/Tik-Tok.svg",
-      href: "https://www.instagram.com/sviautoservis_?igsh=dGNjY3QwNnlxMjk%3D&utm_source=qr",
-      label: "Instagram"
-    },
-    {
-      icon: "../../../public//icons/HeaderIcons/Facebook.svg",
-      href: "https://www.tiktok.com/@svi.servis?_t=ZG-8tbgPYLKlub&_r=1",
-      label: "TikTok"
-    },
-  ];
-
-
 
   return (
     <Box
@@ -114,7 +61,6 @@ export const Header = () => {
         </HStack>
       </HStack>
 
-      {/* Логотип и город */}
       <VStack spacing={0} mt={6}>
         <Img src="/icons/Logo.svg" w={210} />
         <Text color="primary.white" fontWeight={700} fontSize="16px">Ostrava-Hulváky</Text>

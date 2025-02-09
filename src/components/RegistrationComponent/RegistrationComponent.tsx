@@ -1,6 +1,6 @@
 import { IconButton, Image } from "@chakra-ui/react";
-import registerIcon from "../../../public/icons/RegistrationButton/register.svg"
-import registerDoneIcon from "../../../public/icons/RegistrationButton/register-done.svg";
+import registerIcon from "/icons/RegistrationButton/register.svg"
+import registerDoneIcon from "/icons/RegistrationButton/register-done.svg";
 
 interface RegistrationComponentProps {
   onOpen: () => void;
