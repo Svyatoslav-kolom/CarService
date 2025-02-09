@@ -8,7 +8,7 @@ export const Services = () => {
     <VStack alignItems="center" gap="20px">
       {services.map((service) => (
         <Box w={300}>
-          <Card icon={service.icon} title={service.title} description={service.description} />
+          <Card icon={service.icon} title={service.title} />
         </Box>
       ))}
     </VStack>
