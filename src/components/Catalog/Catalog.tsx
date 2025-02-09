@@ -9,19 +9,8 @@ interface CatalogProps {
 export const Catalog = ({ onSelectComponent }: CatalogProps) => {
   return (
     <Box mt="9px">
-      <Heading
-        fontSize="14px"
-        fontWeight="bold"
-        textAlign="center"
-        color="primary.white"
-        mb={2}
-      >
-        Servisujeme vozidla <br />
-        všech značek
-      </Heading>
-
-      <VStack display="flex" flexWrap="wrap" gap={4} justifyContent="center">
-        <HStack mb="-40px" fontSize="15px">
+      <VStack display="flex" flexWrap="wrap" gap={4} justifyContent="center" fontSize="10px" >
+        <HStack mb="-40px">
           {hexagons.slice(0, 2).map((hexagon) => (
             <Hexagon
               key={hexagon.title}
@@ -32,28 +21,40 @@ export const Catalog = ({ onSelectComponent }: CatalogProps) => {
           ))}
         </HStack>
 
-        <HStack fontSize="10px">
+        <HStack>
           {hexagons.slice(2, 5).map((hexagon) => (
             <Hexagon
               key={hexagon.title}
               title={hexagon.title}
               icon={hexagon.icon}
-              onClick={() => onSelectComponent(hexagon.link)} 
+              onClick={() => onSelectComponent(hexagon.link)}
             />
           ))}
         </HStack>
 
-        <HStack mt="-40px" fontSize="10px">
+        <HStack mt="-40px">
           {hexagons.slice(5, 7).map((hexagon) => (
             <Hexagon
               key={hexagon.title}
               title={hexagon.title}
               icon={hexagon.icon}
-              onClick={() => onSelectComponent(hexagon.link)} 
+              onClick={() => onSelectComponent(hexagon.link)}
             />
           ))}
         </HStack>
       </VStack>
+
+      <Heading
+        fontSize="14px"
+        fontWeight="bold"
+        textAlign="center"
+        color="primary.white"
+        mt={3}
+        textTransform="uppercase"
+      >
+        ● Servisujeme vozidla všech značek
+      </Heading>
+
     </Box>
   );
 };

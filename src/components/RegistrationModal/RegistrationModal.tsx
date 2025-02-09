@@ -4,16 +4,17 @@ import { RegistrationForm } from "../RegistrationForm";
 interface RegistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess: () => void; // Добавлен пропс для обработки успешной регистрации
 }
 
-export const RegistrationModal = ({ isOpen, onClose }: RegistrationModalProps) => (
+export const RegistrationModal = ({ isOpen, onClose, onSuccess }: RegistrationModalProps) => (
   <Modal isOpen={isOpen} onClose={onClose}>
     <ModalOverlay backdropFilter="blur(10px)" />
     <ModalContent maxW="300px">
       <ModalHeader>Registration</ModalHeader>
       <ModalCloseButton />
       <ModalBody>
-        <RegistrationForm onSuccess={onClose} />
+        <RegistrationForm onSuccess={onSuccess} />
       </ModalBody>
     </ModalContent>
   </Modal>
