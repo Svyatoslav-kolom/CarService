@@ -8,7 +8,7 @@ export const Header = () => {
 
   const headerLinks = [
     {
-      icon: "/icons/HeaderIcons/Phone.svg",
+      icon: "../../../public/icons/HeaderIcons/Phone.svg",
       label: "Телефон",
       content: (
         <>
@@ -18,7 +18,7 @@ export const Header = () => {
       ),
     },
     {
-      icon: "/icons/HeaderIcons/Mail.svg",
+      icon: "../../../public//icons/HeaderIcons/Mail.svg",
       label: "Email",
       content: (
         <>
@@ -29,7 +29,7 @@ export const Header = () => {
       ),
     },
     {
-      icon: "/icons/HeaderIcons/Time.svg",
+      icon: "../../../public//icons/HeaderIcons/Time.svg",
       label: "Время работы",
       content: (
         <>
@@ -43,17 +43,17 @@ export const Header = () => {
 
   const socialLinks = [
     {
-      icon: "/icons/HeaderIcons/Instagram.svg",
+      icon: "../../../public//icons/HeaderIcons/Instagram.svg",
       href: "https://www.facebook.com/share/g/15gk7HwLAn/?mibextid=wwXIfr",
       label: "Facebook"
     },
     {
-      icon: "/icons/HeaderIcons/Tik-Tok.svg",
+      icon: "../../../public//icons/HeaderIcons/Tik-Tok.svg",
       href: "https://www.instagram.com/sviautoservis_?igsh=dGNjY3QwNnlxMjk%3D&utm_source=qr",
       label: "Instagram"
     },
     {
-      icon: "/icons/HeaderIcons/Facebook.svg",
+      icon: "../../../public//icons/HeaderIcons/Facebook.svg",
       href: "https://www.tiktok.com/@svi.servis?_t=ZG-8tbgPYLKlub&_r=1",
       label: "TikTok"
     },
