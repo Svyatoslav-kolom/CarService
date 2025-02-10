@@ -1,18 +1,18 @@
-import { HStack, Image, Text, VStack, useTheme } from "@chakra-ui/react";
-// import { AnimatePresence, motion } from "framer-motion";
-import { FC } from "react";
+import { Box, HStack, Image, Text, VStack, useTheme } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FC, useState } from "react";
 
 interface Props {
   icon: string;
   title: string;
-  // description: string;
+  description: string;
 }
 
-// const MotionBox = motion(Box);
+const MotionBox = motion(Box);
 
-export const Card: FC<Props> = ({ icon, title }) => {
+export const Card: FC<Props> = ({ icon, title, description }) => {
   const theme = useTheme();
-  // const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <VStack
@@ -23,7 +23,7 @@ export const Card: FC<Props> = ({ icon, title }) => {
       // pb={isOpen ? 0 : 5}
       gap={0}
       borderRadius="md"
-      // onClick={() => setIsOpen(prev => !prev)}
+      onClick={() => setIsOpen(prev => !prev)}
       cursor="pointer"
       overflow="hidden"
       _active={{
@@ -45,7 +45,7 @@ export const Card: FC<Props> = ({ icon, title }) => {
         </Text>
       </HStack>
 
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isOpen && (
           <MotionBox
             initial={{ height: 0, opacity: 0 }}
@@ -63,13 +63,14 @@ export const Card: FC<Props> = ({ icon, title }) => {
               textAlign="center"
               transition="all 0.3s ease-in-out"
             >
-              <Text>
+              <Text textAlign="left">
                 {description}
               </Text>
+
             </Box>
           </MotionBox>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </VStack>
   );
 };

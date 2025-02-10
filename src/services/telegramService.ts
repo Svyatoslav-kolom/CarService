@@ -7,7 +7,7 @@ export const sendTelegramMessage = async (name: string, email: string, phone: st
     throw new Error("Missing bot token or chat ID.");
   }
 
-  const message = `📩 Новая регистрация\n\n👤 Имя: ${name}\n✉️ Email: ${email}\n📞 Телефон: ${phone}`;
+  const message = `📩 Nová registrace\n\n👤 Jméno: ${name}\n✉️ Email: ${email}\n📞 Telefon: ${phone}`;
 
   const response = await fetch(TELEGRAM_API_URL, {
     method: "POST",

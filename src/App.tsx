@@ -34,7 +34,7 @@ function App() {
         <InfoComponent selectedComponent={selectedComponent} />
       </VStack>
 
-      <Box position="fixed" bottom="30px" right="20px">
+      <Box position="fixed" bottom="50px" right="20px">
         <RegistrationComponent onOpen={() => setIsOpen(true)} isRegistered={isRegistered} />
       </Box>
 
