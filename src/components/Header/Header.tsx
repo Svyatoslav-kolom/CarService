@@ -1,4 +1,4 @@
-import { Box, HStack, Img, Link, Text, Tooltip, useTheme, VStack, useDisclosure } from "@chakra-ui/react";
+import { Box, HStack, Img, Link, Text, Tooltip, useTheme, VStack} from "@chakra-ui/react";
 import { useState } from "react";
 import { socialLinks } from "../../ComponentsData/socialLinks";
 import { headerLinks } from "../../ComponentsData/headerLinks";
@@ -6,11 +6,10 @@ import { headerLinks } from "../../ComponentsData/headerLinks";
 export const Header = () => {
   const theme = useTheme();
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
-  const { onOpen } = useDisclosure();
 
   const iconSize = { base: "20px", md: "30px", xl: "30px" };
   const logoSize = { base: "210px", md: "450px", xl: "735px" };
-  const iconsGap = { base: 5, md: 7 }
+  const iconsGap = { base: 5, md: 7 };
   const titleFontSize = { base: "16px", md: "25px", xl: "36px" };
   const promoFontSize = { base: "19px", md: "30px", xl: "28px" };
   const bulletFontSize = { base: "10px", md: "15px" };
@@ -62,10 +61,6 @@ export const Header = () => {
                   as="span"
                   display="flex"
                   cursor="pointer"
-                  onClick={() => {
-                    setTooltipContent(tooltipContent === label ? null : label);
-                    onOpen();
-                  }}
                   onMouseEnter={() => setTooltipContent(label)}
                   onMouseLeave={() => setTooltipContent(null)}
                 >
@@ -89,7 +84,7 @@ export const Header = () => {
         <Img src="/icons/Logo.svg" w={logoSize} mt={6} />
       </VStack>
 
-      <VStack maxW={maxWidth} alignItems="end" >
+      <VStack maxW={maxWidth} alignItems={{ base: "center", xl: "end" }}>
         <Text color="primary.white" fontWeight={700} fontSize={titleFontSize}>
           Ostrava-Hulváky
         </Text>
@@ -100,10 +95,10 @@ export const Header = () => {
           bgGradient={theme.colors.gradients.red}
           boxShadow="xl"
           order={order}
-          {...lineMargin} 
+          {...lineMargin}
         />
 
-        <Box color="white" fontWeight="bold" fontSize={promoFontSize} textAlign="right">
+        <Box color="white" fontWeight="bold" fontSize={promoFontSize} textAlign={{ base: "center", xl: "right" }}>
           <Text as="span" fontSize={bulletFontSize} bgGradient="linear(180deg, #E30613 21.5%, #B0050F 63.5%, #7D030A 100%)" bgClip="text">
             ●
           </Text>{" "}

@@ -8,7 +8,8 @@ interface RegistrationComponentProps {
   isRegistered: boolean;
 }
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
+
 
 export const RegistrationComponent = ({ onOpen, isRegistered }: RegistrationComponentProps) => {
   return (

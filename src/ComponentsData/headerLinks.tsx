@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Link } from "@chakra-ui/react";
 
 export const headerLinks = [
     {
@@ -7,7 +7,7 @@ export const headerLinks = [
         content: (
             <>
                 <Text>SVI AUTOSERVIS</Text>
-                <Text>+420 739 696 649</Text>
+                <Link href="tel:+420739696649">+420 739 696 649</Link>
             </>
         ),
     },
@@ -16,9 +16,9 @@ export const headerLinks = [
         label: "Email",
         content: (
             <>
-                <Text>sviautoservis@email.cz</Text>
+                <Link href="mailto:sviautoservis@email.cz" >sviautoservis@email.cz</Link>
                 <Text>Fakturační adresa</Text>
-                <Text>fakturacesviservis@seznam.cz</Text>
+                <Link href="mailto:fakturacesviservis@seznam.cz">fakturacesviservis@seznam.cz</Link>
             </>
         ),
     },

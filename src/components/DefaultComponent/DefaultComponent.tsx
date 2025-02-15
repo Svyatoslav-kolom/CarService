@@ -11,7 +11,7 @@ export const DefaultComponent: FC = () => {
       alignItems="center"
       justifyContent="center"
       position="relative"
-      bgImage="url('/background/default.png')"
+      bgImage="url('/background/default.webp')"
       bgSize="cover"
       bgPosition="center"
       bgRepeat="no-repeat"

@@ -10,7 +10,7 @@ interface Props {
   onClick: () => void;
 }
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 export const Card: FC<Props> = ({ icon, title, description, isOpen, onClick }) => {
   const theme = useTheme();

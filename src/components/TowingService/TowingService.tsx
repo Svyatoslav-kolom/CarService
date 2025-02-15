@@ -27,14 +27,12 @@ export const TowingService = () => {
       <Divider display={display}/>
 
       <Img
-        src="img/towing.png"
+        src="img/towing.webp"
         mt={7}
         w="100%"
         borderRadius="xl"
         filter="brightness(0.5)"
       />
-
-
     </VStack>
   );
 }
