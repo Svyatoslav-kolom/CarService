@@ -8,73 +8,108 @@ export const Header = () => {
   const [tooltipContent, setTooltipContent] = useState<string | null>(null);
   const { onOpen } = useDisclosure();
 
+  const iconSize = { base: "20px", md: "30px", xl: "30px" };
+  const logoSize = { base: "210px", md: "450px", xl: "735px" };
+  const iconsGap = { base: 5, md: 7 }
+  const titleFontSize = { base: "16px", md: "25px", xl: "36px" };
+  const promoFontSize = { base: "19px", md: "30px", xl: "28px" };
+  const bulletFontSize = { base: "10px", md: "15px" };
+  const tooltipStyle = {
+    bg: "rgba(0, 0, 0, 0.4)",
+    border: "1px solid black",
+    color: "white",
+    fontSize: "14px",
+    fontWeight: 400,
+    borderRadius: "md",
+    p: 3,
+  };
+
+  const bgGradient = { base: theme.colors.gradients.gray3, xl: "none" };
+  const boxShadow = { base: "0px 5px 100px black", xl: "none" };
+  const maxWidth = { base: "1000px", xl: "570px" };
+  const iconsItemJustify = { base: "space-between", xl: "flex-start" };
+  const order = { base: 1, xl: 3 };
+  const lineMargin = {
+    mt: { base: 6, xl: "auto" },
+    mb: { base: 6, xl: 0 },
+  };
+
   return (
     <Box
       py={4}
-      px={5}
-      bgGradient={theme.colors.gradients.gray3}
-      boxShadow="0px 5px 100px black"
+      px={{ base: 4, md: "45px" }}
+      bgGradient={bgGradient}
+      boxShadow={boxShadow}
       zIndex={10}
       position="relative"
       borderBottomRadius="lg"
+      h="100%"
+      display="flex"
+      flexDirection={{ base: "column", xl: "row" }}
+      justifyContent="space-between"
     >
-      <HStack justifyContent="space-between">
-        <HStack spacing={5}>
-          {headerLinks.map(({ icon, label, content }) => (
-            <Tooltip
-              key={label}
-              label={tooltipContent === label ? content : ""}
-              isOpen={tooltipContent === label}
-              bg="rgba(0, 0, 0, 0.4)"
-              border="1px solid black"
-              color="white"
-              fontSize="14px"
-              fontWeight={400}
-              borderRadius="md"
-              p={3}
-            >
-              <Box
-                as="span"
-                display="flex"
-                cursor="pointer"
-                onClick={() => {
-                  setTooltipContent(tooltipContent === label ? null : label);
-                  onOpen();
-                }}
-                onMouseEnter={() => setTooltipContent(label)}
-                onMouseLeave={() => setTooltipContent(null)}
+      <VStack>
+        <HStack justifyContent={iconsItemJustify} gap={iconsGap} w="100%">
+          <HStack spacing={iconsGap}>
+            {headerLinks.map(({ icon, label, content }) => (
+              <Tooltip
+                key={label}
+                label={tooltipContent === label ? content : ""}
+                isOpen={tooltipContent === label}
+                {...tooltipStyle}
               >
-                <Img src={icon} alt={label} width="20px" height="20px" />
-              </Box>
-            </Tooltip>
-          ))}
+                <Box
+                  as="span"
+                  display="flex"
+                  cursor="pointer"
+                  onClick={() => {
+                    setTooltipContent(tooltipContent === label ? null : label);
+                    onOpen();
+                  }}
+                  onMouseEnter={() => setTooltipContent(label)}
+                  onMouseLeave={() => setTooltipContent(null)}
+                >
+                  <Img src={icon} alt={label} width={iconSize} height={iconSize} />
+                </Box>
+              </Tooltip>
+            ))}
+          </HStack>
+
+          <HStack spacing={5}>
+            {socialLinks.map(({ icon, href, label }) => (
+              <Link key={label} href={href} isExternal>
+                <Box as="span" display="flex">
+                  <Img src={icon} alt={label} width={iconSize} height={iconSize} />
+                </Box>
+              </Link>
+            ))}
+          </HStack>
         </HStack>
 
-        <HStack spacing={5}>
-          {socialLinks.map(({ icon, href, label }) => (
-            <Link key={label} href={href} isExternal>
-              <Box as="span" display="flex">
-                <Img src={icon} alt={label} width="20px" height="20px" />
-              </Box>
-            </Link>
-          ))}
-        </HStack>
-      </HStack>
-
-      <VStack spacing={0} mt={6}>
-        <Img src="/icons/Logo.svg" w={210} />
-        <Text color="primary.white" fontWeight={700} fontSize="16px">Ostrava-Hulváky</Text>
+        <Img src="/icons/Logo.svg" w={logoSize} mt={6} />
       </VStack>
 
-      <Box w="full" h="3px" bgGradient={theme.colors.gradients.red} mb="20px" boxShadow="xl" mt="10px" />
+      <VStack maxW={maxWidth} alignItems="end" >
+        <Text color="primary.white" fontWeight={700} fontSize={titleFontSize}>
+          Ostrava-Hulváky
+        </Text>
 
-      {/* Акция */}
-      <Box color="white" fontWeight="bold" fontSize="19px" textAlign="center">
-        <Text as="span" fontSize="10px" bgGradient="linear(180deg, #E30613 21.5%, #B0050F 63.5%, #7D030A 100%)" bgClip="text">
-          ●
-        </Text>{" "}
-        15% SLEVA NA VŠECHNY SLUŽBY AUTOSERVISU PŘI REGISTRACI NA WEBU
-      </Box>
+        <Box
+          w="full"
+          h="3px"
+          bgGradient={theme.colors.gradients.red}
+          boxShadow="xl"
+          order={order}
+          {...lineMargin} 
+        />
+
+        <Box color="white" fontWeight="bold" fontSize={promoFontSize} textAlign="right">
+          <Text as="span" fontSize={bulletFontSize} bgGradient="linear(180deg, #E30613 21.5%, #B0050F 63.5%, #7D030A 100%)" bgClip="text">
+            ●
+          </Text>{" "}
+          15% SLEVA NA VŠECHNY SLUŽBY AUTOSERVISU PŘI REGISTRACI NA WEBU
+        </Box>
+      </VStack>
     </Box>
   );
 };

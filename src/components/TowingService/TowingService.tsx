@@ -1,33 +1,40 @@
 import { VStack, Divider, List, ListItem, Img } from "@chakra-ui/react";
 
-export const TowingService = () => (
-  <VStack
-    align="start"
-    color="white"
-    borderRadius="md"
-    fontSize="14px"
-    fontWeight="600"
-  >
-    <List spacing={2}>
-      <ListItem>
-        Odtahová služba
-      </ListItem>
+export const TowingService = () => {
+  const display = { base: "block", xl: "none" }
 
-      <ListItem>
-        Náš servis nabízí odtahové služby 27/7 v rámci
-      </ListItem>
+  return (
+    <VStack
+      align="start"
+      color="white"
+      borderRadius="md"
+      fontWeight="600"
+    >
+      <List spacing={2} >
+        <ListItem fontSize="1.05em">
+          Odtahová služba
+        </ListItem>
 
-      <ListItem>
-        Ostravu a také po celé České republice.
-      </ListItem>
-    </List>
+        <ListItem>
+          Náš servis nabízí odtahové služby 27/7 v rámci
+        </ListItem>
 
-    <Divider />
+        <ListItem>
+          Ostravu a také po celé České republice.
+        </ListItem>
+      </List>
 
-    <Img
-      src="img/towing.png"
-      mt={7}
-    />
+      <Divider display={display}/>
 
-  </VStack>
-);
+      <Img
+        src="img/towing.png"
+        mt={7}
+        w="100%"
+        borderRadius="xl"
+        filter="brightness(0.5)"
+      />
+
+
+    </VStack>
+  );
+}

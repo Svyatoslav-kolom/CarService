@@ -1,4 +1,4 @@
-import { Box, useTheme, VStack } from "@chakra-ui/react";
+import { Box, Stack, useTheme } from "@chakra-ui/react";
 import { useState } from "react";
 import { Header } from "./components/Header";
 import { Catalog } from "./components/Catalog";
@@ -17,29 +17,39 @@ function App() {
     setSelectedComponent(component);
   };
 
-  // Функция вызывается при успешной регистрации
   const handleRegistrationSuccess = () => {
     setIsRegistered(true);
-    setIsOpen(false); // Закрываем модальное окно
+    setIsOpen(false);
   };
 
+  const elementsMargin = { base: 6, md: 12 };
+  const pageBottomPadding = { base: 5, md: 12, xl: 40 };
+  const marginX = { base: 4, md: "45px" };
+
   return (
-    <Box bgGradient={theme.colors.gradients.gray1} pb={5}>
+    <Box bgGradient={{base: theme.colors.gradients.gray1, xl: theme.colors.gradients.desktopBackground}} pb={pageBottomPadding}>
       <Header />
 
-      <VStack spacing={3}>
-        <Box mt={6}>
+      <Stack
+        direction={{ base: "column", xl: "row" }}
+        mx={marginX}
+        spacing={{ base: 3, md: 12, xl: 0 }}
+        justify={{ xl: "space-between" }}
+        mt={elementsMargin}
+      >
+        <Box>
           <Catalog onSelectComponent={handleSelectComponent} />
         </Box>
-        <InfoComponent selectedComponent={selectedComponent} />
-      </VStack>
+        <Stack alignItems="stretch">
+          <InfoComponent selectedComponent={selectedComponent} />
+        </Stack>
 
-      <Box position="fixed" bottom="50px" right="20px">
+      </Stack>
+
+      <Box position="fixed" bottom="50px" right="20px" zIndex={10}>
         <RegistrationComponent onOpen={() => setIsOpen(true)} isRegistered={isRegistered} />
       </Box>
 
-
-      {/* Модальное окно с передачей onSuccess */}
       <RegistrationModal isOpen={isOpen} onClose={() => setIsOpen(false)} onSuccess={handleRegistrationSuccess} />
     </Box>
   );

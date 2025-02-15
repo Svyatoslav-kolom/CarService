@@ -1,48 +1,51 @@
 import { VStack, Text, List, ListItem, Divider } from "@chakra-ui/react";
 
-export const CleaningDPF = () => (
-  <VStack
-    align="start"
-    color="white"
-    borderRadius="md"
-    fontSize="14px"
-    fontWeight="200"
-  >
+export const CleaningDPF = () => {
+  const display = { base: "block", xl: "none" }
 
-    <Text fontWeight="400" fontSize="16px">
-      ČIŠTĚNÍ PROBÍHÁ NA NOVÉM MODERNÍM STROJE KTERÝ DOKÁŽE FILTR
-      PEVNÝCH ČÁSTIC OBNOVIT AŽ NA 95%. BEZ JAKÉHOKOLIV NARUŠENÍ
-      STRUKTURY FILTRU.
-    </Text>
+  return (
+    <VStack
+      align="start"
+      color="white"
+      borderRadius="md"
+      fontWeight="200"
+    >
 
-    <Divider />
+      <Text fontWeight="400" fontSize="1.05em">
+        ČIŠTĚNÍ PROBÍHÁ NA NOVÉM MODERNÍM STROJE KTERÝ DOKÁŽE FILTR
+        PEVNÝCH ČÁSTIC OBNOVIT AŽ NA 95%. BEZ JAKÉHOKOLIV NARUŠENÍ
+        STRUKTURY FILTRU.
+      </Text>
 
-    <Text fontWeight="400" mb={2}>
-      Cena čištění
-    </Text>
+      <Divider display={display}/>
 
-    <List spacing={2} styleType="disc" ml={6}>
-      <ListItem>
-        Osobní vozidla 3000 s DPHKč
-      </ListItem>
+      <Text fontWeight="400" mb={2}>
+        Cena čištění
+      </Text>
 
-      <ListItem>
-        Dodávky 4000 s DPH Kč
-      </ListItem>
-    </List>
+      <List spacing={2} styleType="disc" ml={6}>
+        <ListItem>
+          Osobní vozidla 3000 s DPHKč
+        </ListItem>
 
-    <Text fontWeight="400" my={2}>
-      Komplet demontáž, montáž a adaptace
-    </Text>
+        <ListItem>
+          Dodávky 4000 s DPH Kč
+        </ListItem>
+      </List>
 
-    <List spacing={2} styleType="disc" ml={6}>
-      <ListItem>
-        Osobní vozidla od 5500 bez DPH Kč
-      </ListItem>
+      <Text fontWeight="400" my={2}>
+        Komplet demontáž, montáž a adaptace
+      </Text>
 
-      <ListItem>
-        Dodávky od 7000 bez  DPH Kč
-      </ListItem>
-    </List>
-  </VStack>
-);
+      <List spacing={2} styleType="disc" ml={6}>
+        <ListItem>
+          Osobní vozidla od 5500 bez DPH Kč
+        </ListItem>
+
+        <ListItem>
+          Dodávky od 7000 bez  DPH Kč
+        </ListItem>
+      </List>
+    </VStack>
+  );
+}

@@ -5,7 +5,6 @@ export const Cooperation = () => (
     align="start"
     color="white"
     borderRadius="md"
-    fontSize="14px"
     fontWeight="200"
   >
     
@@ -15,7 +14,7 @@ export const Cooperation = () => (
       dodávek do 3.5 tun.
     </Text>
 
-    <Text fontSize="16px" fontWeight="bold" mt={5}>
+    <Text fontSize="1.05em" fontWeight="bold" mt={5}>
       Nabízíme
     </Text>
 

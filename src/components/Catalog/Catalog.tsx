@@ -7,6 +7,10 @@ interface CatalogProps {
 }
 
 export const Catalog = ({ onSelectComponent }: CatalogProps) => {
+  const titleSize = { base: "14px", md: "25px" };
+  const titleMargin = { base: 3, md: 100 };
+  const display = { base: "block", xl: "none" };
+
   return (
     <Box mt="9px">
       <VStack display="flex" flexWrap="wrap" gap={4} justifyContent="center" fontSize="10px" >
@@ -45,12 +49,13 @@ export const Catalog = ({ onSelectComponent }: CatalogProps) => {
       </VStack>
 
       <Heading
-        fontSize="14px"
+        fontSize={titleSize}
         fontWeight="bold"
         textAlign="center"
         color="primary.white"
-        mt={3}
+        mt={titleMargin}
         textTransform="uppercase"
+        display={display}
       >
         ● Servisujeme vozidla všech značek
       </Heading>
