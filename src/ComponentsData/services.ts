@@ -6,15 +6,15 @@ interface ServicesItem {
 
 export const services: ServicesItem[] = [
     {
-        title: "Diagnostika", icon: "../../../public/icons/ServicesIcons/diagostic.svg",
+        title: "Diagnostika", icon: "icons/ServicesIcons/diagostic.svg",
         description: "Provádíme kompletní diagnostiku vozidla včetně motoru, brzdového systému, převodovky a elektroniky. Odhalíme skryté závady a navrhneme optimální řešení opravy."
     },
     {
-        title: "Výměna oleje a filtru", icon: "../../../public/icons/ServicesIcons/oil.svg",
+        title: "Výměna oleje a filtru", icon: "icons/ServicesIcons/oil.svg",
         description: "Pravidelná výměna oleje a filtrů prodlužuje životnost motoru a zajišťuje jeho optimální chod. Používáme kvalitní oleje a filtry dle doporučení výrobce."
     },
     {
-        title: "Klimatizace", icon: "../../../public/icons/ServicesIcons/conditioner.svg",
+        title: "Klimatizace", icon: "icons/ServicesIcons/conditioner.svg",
         description: "Nabízíme plnění, čištění a opravy klimatizace. Kontrolujeme úniky chladiva, dezinfikujeme systém a zajišťujeme správnou funkčnost klimatizace."
     },
     {
