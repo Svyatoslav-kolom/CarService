@@ -19,41 +19,41 @@ export const services: ServicesItem[] = [
     },
     {
         title: "Pneuservis",
-        icon: "../../../public/icons/ServicesIcons/tire.svg",
+        icon: "icons/ServicesIcons/tire.svg",
         description: "Provádíme výměnu, vyvážení a opravy pneumatik. Kontrolujeme stav dezénu a tlak v pneumatikách, abychom zajistili bezpečnost vašeho vozidla."
     },
     {
-        title: "Kontrola a oprava brzd", icon: "../../../public/icons/ServicesIcons/breaks.svg",
+        title: "Kontrola a oprava brzd", icon: "icons/ServicesIcons/breaks.svg",
         description: "Provádíme kontrolu a opravy brzdového systému, včetně výměny brzdových destiček, kotoučů a kapaliny. Zajišťujeme bezpečnost vašeho vozu."
     },
     {
         title: "Výměna rozvodových řemenů",
-        icon: "../../../public/icons/ServicesIcons/timing-belts.svg",
+        icon: "icons/ServicesIcons/timing-belts.svg",
         description: "Pravidelná výměna rozvodového řemenu je klíčová pro prevenci vážných poruch motoru. Používáme kvalitní součástky a garantujeme profesionální montáž."
     },
     {
         title: "Příprava k STK",
-        icon: "../../../public/icons/ServicesIcons/stk.svg",
+        icon: "icons/ServicesIcons/stk.svg",
         description: "Připravíme vaše vozidlo na technickou kontrolu STK. Zkontrolujeme stav brzd, osvětlení, emisí a dalších klíčových systémů, abyste prošli kontrolou bez problémů."
     },
     {
         title: "Repas automatických a manuálních převodovek",
-        icon: "../../../public/icons/ServicesIcons/transmissions.svg",
+        icon: "icons/ServicesIcons/transmissions.svg",
         description: "Opravy a renovace převodovek zahrnují diagnostiku, výměnu opotřebovaných součástí a testování funkčnosti, aby byla zajištěna hladká jízda."
     },
     {
         title: "Oprava motoru",
-        icon: "../../../public/icons/ServicesIcons/motor.svg",
+        icon: "icons/ServicesIcons/motor.svg",
         description: "Provádíme běžné i generální opravy motorů, včetně výměny pístních kroužků, ventilů a těsnění. Diagnostikujeme problémy a zajišťujeme profesionální opravu."
     },
     {
         title: "Čip tuning",
-        icon: "../../../public/icons/ServicesIcons/chip.svg",
+        icon: "icons/ServicesIcons/chip.svg",
         description: "Optimalizujeme software řídicí jednotky motoru (ECU) pro zvýšení výkonu, točivého momentu a snížení spotřeby paliva. Zlepšíme dynamiku vašeho vozidla."
     },
     {
         title: "Elektrikářské práce",
-        icon: "../../../public/icons/ServicesIcons/electrical.svg",
+        icon: "icons/ServicesIcons/electrical.svg",
         description: "Diagnostika a opravy elektroinstalace vozidla, instalace doplňkového vybavení a modernizace osvětlení. Zajistíme správnou funkčnost elektronických systémů."
     }
 ];
